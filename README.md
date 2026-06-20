@@ -126,6 +126,4 @@ This repository follows reproducible research principles through:
 
 ---
 
-## AI Assistance Disclosure
 
-AI assistance (ChatGPT, OpenAI) was used for brainstorming, academic writing support, repository organization, and documentation improvement. All methodological decisions, data preparation, model implementation, evaluation, interpretation of results, and research contributions remain the responsibility of the author and collaborators.
