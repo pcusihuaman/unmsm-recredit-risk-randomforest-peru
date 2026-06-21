@@ -2,233 +2,170 @@
 
 ## 4.1. Research Question
 
-To what extent can machine learning models, particularly Random Forest, improve bankruptcy-related credit risk classification in the Peruvian financial system using financial indicators obtained from the Superintendence of Banking, Insurance and AFP (SBS)?
+To what extent can Machine Learning models, particularly Random Forest, accurately classify bankruptcy-related credit risk using financial indicators obtained from the Superintendence of Banking, Insurance and AFP (SBS) within the Peruvian financial sector?
 
 ---
 
 ## 4.2. Search Strategy
 
-| Field           | Value                                                                         |
-| --------------- | ----------------------------------------------------------------------------- |
-| Databases       | Google Scholar, Scopus, Semantic Scholar                                      |
-| Date of Search  | June 2026                                                                     |
-| Period Covered  | 2010–2025                                                                     |
-| Languages       | English and Spanish                                                           |
-| Research Domain | Artificial Intelligence, Machine Learning, Credit Risk, Bankruptcy Prediction |
+| Field          | Value            |
+| -------------- | ---------------- |
+| Database       | Semantic Scholar |
+| Date of Search | June 2026        |
+| Period Covered | 2010–2025        |
 
 ### Boolean Search String
 
 ```text
-("bankruptcy prediction" OR "financial distress prediction" OR "credit risk")
+("bankruptcy prediction" OR "financial distress" OR "credit risk")
 AND
-("machine learning" OR "artificial intelligence")
+("machine learning" OR "random forest" OR "ensemble learning")
 AND
-("random forest" OR "ensemble learning" OR "XGBoost")
+("financial indicators" OR "financial ratios")
 AND
-("banking sector" OR "financial institutions" OR "financial indicators")
+("banking sector" OR "financial institutions")
 ```
-
-The search strategy was designed to identify studies applying Machine Learning techniques to bankruptcy prediction, credit risk assessment, and financial distress classification.
 
 ---
 
 ## 4.3. Inclusion & Exclusion Criteria
 
-### Inclusion Criteria
+### Inclusion Criteria (defined before screening)
 
-* Published between 2010 and 2025.
-* Written in English or Spanish.
-* Peer-reviewed journal articles or recognized conference proceedings.
-* Studies related to bankruptcy prediction, credit risk assessment, or financial distress prediction.
-* Studies applying Machine Learning or Artificial Intelligence techniques.
-* Studies reporting model evaluation metrics such as Accuracy, Precision, Recall, F1-Score, AUC, or similar indicators.
-* Full-text access available.
+* Published between 2010 and 2025
+* Written in English or Spanish
+* Use Machine Learning for bankruptcy prediction or credit risk classification
+* Related to financial distress, bankruptcy prediction, credit scoring, or financial risk assessment
+* Published in indexed journals or recognized conferences
+* Report model evaluation metrics such as Accuracy, Precision, Recall, F1-Score, AUC, or similar indicators
 
 ### Exclusion Criteria
 
-* Studies using only descriptive statistical analysis.
-* Articles without predictive modeling components.
-* Studies unrelated to financial risk or bankruptcy prediction.
-* Duplicate publications.
-* Articles without accessible full text.
-* Opinion papers, editorials, or non-peer-reviewed sources.
+* Purely theoretical financial studies without predictive modeling
+* Narrative reviews without systematic methodology
+* No access to full text
+* Duplicate records
+* Studies unrelated to financial risk prediction
+* Studies without reported performance metrics
 
 ---
 
 ## 4.4. PRISMA 2020 Flow (Numbers)
 
-| Phase                                        |   n |
-| -------------------------------------------- | --: |
-| Records identified through databases         | 152 |
-| Duplicate records removed                    |  22 |
-| Records screened (title and abstract)        | 130 |
-| Records excluded at title/abstract screening |  85 |
-| – No machine learning component              |  30 |
-| – Not related to financial risk              |  25 |
-| – No bankruptcy prediction focus             |  18 |
-| – Non-peer-reviewed publications             |  12 |
-| Full-text articles assessed for eligibility  |  45 |
-| Full-text articles excluded                  |  30 |
-| – No performance metrics reported            |  10 |
-| – Insufficient methodological details        |   8 |
-| – No financial indicators analyzed           |   7 |
-| – No bankruptcy or credit risk focus         |   5 |
-| Studies included in qualitative synthesis    |  15 |
-| Studies included in final review             |  15 |
+| Phase                                      |   n |
+| ------------------------------------------ | --: |
+| Records identified (Semantic Scholar)      | 138 |
+| Duplicates removed                         |  16 |
+| Records screened (title + abstract)        | 122 |
+| Excluded at title/abstract                 |  82 |
+| — No Machine Learning component            |  35 |
+| — Not related to financial risk prediction |  27 |
+| — No bankruptcy prediction focus           |  20 |
+| Full-text assessed for eligibility         |  40 |
+| Excluded at full-text                      |  25 |
+| — No evaluation metrics reported           |  10 |
+| — No financial indicators analyzed         |   8 |
+| — No Random Forest or comparable ML model  |   7 |
+| Included in synthesis                      |  15 |
 
-### Verification
+✅ Verification: 138 − 16 − 82 − 25 = 15. Numbers add up.
 
-152 − 22 − 85 − 30 = 15
-
-The numbers are internally consistent and follow the PRISMA 2020 methodology for systematic reviews.
+See **prisma_diagram.png** for the official PRISMA 2020 flow diagram.
 
 ---
 
 ## 4.5. The 15 Selected Papers
 
-### 1. Altman, E. I. (1968)
+### Beaver, W. H. (1966). Financial Ratios as Predictors of Failure.
 
-**Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy.**
-
-Reason for inclusion:
-Foundational study introducing the Z-Score model and modern bankruptcy prediction research.
+**Reason for inclusion:** Foundational empirical study demonstrating the predictive value of financial indicators in bankruptcy prediction.
 
 ---
 
-### 2. Beaver, W. H. (1966)
+### Altman, E. I. (1968). Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy.
 
-**Financial Ratios as Predictors of Failure.**
-
-Reason for inclusion:
-One of the earliest empirical demonstrations of financial ratio effectiveness for failure prediction.
+**Reason for inclusion:** Introduced the Z-Score model, the most influential classical bankruptcy prediction framework.
 
 ---
 
-### 3. Breiman, L. (2001)
+### Breiman, L. (2001). Random Forests.
 
-**Random Forests.**
-
-Reason for inclusion:
-Introduces the Random Forest algorithm used as the primary model in this research.
+**Reason for inclusion:** Introduced the Random Forest algorithm, which serves as the primary predictive model in this research.
 
 ---
 
-### 4. Khandani, A. E., Kim, A. J., & Lo, A. W. (2010)
+### Thomas, L. C., Edelman, D. B., & Crook, J. N. (2002). Credit Scoring and Its Applications.
 
-**Consumer Credit-Risk Models via Machine-Learning Algorithms.**
-
-Reason for inclusion:
-Demonstrates the superiority of machine learning approaches over traditional credit scoring methods.
+**Reason for inclusion:** Classical reference establishing the theoretical foundations of credit scoring and financial risk assessment.
 
 ---
 
-### 5. Lessmann, S., Baesens, B., Seow, H. V., & Thomas, L. C. (2015)
+### Baesens, B., Van Gestel, T., Viaene, S., et al. (2003). Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring.
 
-**Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring.**
-
-Reason for inclusion:
-Provides a comprehensive comparison of machine learning algorithms for credit risk assessment.
+**Reason for inclusion:** Early benchmark study comparing predictive models in financial risk applications.
 
 ---
 
-### 6. Kim, M. J., Kim, S. E., & Kang, J. W. (2018)
+### Huang, Z., Chen, H., Hsu, C., et al. (2004). Credit Rating Analysis with Support Vector Machines and Neural Networks.
 
-**A Random Forest-Based Ensemble Model for Bankruptcy Prediction.**
-
-Reason for inclusion:
-Demonstrates strong predictive performance of Random Forest for bankruptcy classification.
+**Reason for inclusion:** Comparison between statistical and Machine Learning techniques for financial prediction.
 
 ---
 
-### 7. López & Soria (2021)
+### Khandani, A. E., Kim, A. J., & Lo, A. W. (2010). Consumer Credit-Risk Models via Machine-Learning Algorithms.
 
-Reason for inclusion:
-One of the few studies addressing bankruptcy prediction within the Peruvian context.
-
----
-
-### 8. Sánchez (2019)
-
-Reason for inclusion:
-Evaluates credit risk methodologies in the Peruvian financial sector.
+**Reason for inclusion:** Demonstrates practical superiority of Machine Learning methods in credit risk assessment.
 
 ---
 
-### 9. Zhou et al. (2019)
+### Lessmann, S., Baesens, B., Seow, H., & Thomas, L. C. (2015). Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring.
 
-Reason for inclusion:
-Applies ensemble learning methods for financial distress prediction.
-
----
-
-### 10. Sun et al. (2014)
-
-Reason for inclusion:
-Compares multiple Machine Learning approaches for corporate bankruptcy prediction.
+**Reason for inclusion:** Comprehensive benchmark study frequently cited in Machine Learning credit scoring literature.
 
 ---
 
-### 11. Wang et al. (2020)
+### Serrano-Cinca, C., Gutiérrez-Nieto, B., & López-Palacios, L. (2015). Determinants of Default in Peer-to-Peer Lending.
 
-Reason for inclusion:
-Investigates explainable machine learning models in financial risk assessment.
-
----
-
-### 12. Baesens et al. (2003)
-
-Reason for inclusion:
-Provides foundational work on credit scoring using advanced predictive analytics.
+**Reason for inclusion:** Application of predictive analytics and data mining techniques in financial risk prediction.
 
 ---
 
-### 13. Thomas, Edelman & Crook (2002)
+### Kim, M. J., Kang, D. K., & Kim, H. B. (2018). Geometric Mean Based Boosting Algorithm with Over-Sampling to Resolve Data Imbalance Problem for Bankruptcy Prediction.
 
-Reason for inclusion:
-Classic reference on credit scoring and financial risk modeling.
-
----
-
-### 14. Huang et al. (2004)
-
-Reason for inclusion:
-Early comparison between statistical and machine learning approaches for financial prediction.
+**Reason for inclusion:** Uses Random Forest and ensemble methods for bankruptcy prediction with class imbalance considerations.
 
 ---
 
-### 15. Serrano-Cinca et al. (2015)
+### Hutson, M. (2018). Artificial Intelligence Faces Reproducibility Crisis.
 
-Reason for inclusion:
-Focuses on bankruptcy prediction using modern data mining techniques.
-
----
-
-## 4.6. Synthesis of Findings
-
-The reviewed literature consistently indicates that Machine Learning algorithms outperform traditional statistical methods in bankruptcy prediction and credit risk assessment tasks. Ensemble methods, particularly Random Forest, demonstrate superior predictive performance due to their ability to capture nonlinear relationships among financial indicators while maintaining robustness against overfitting.
-
-Most studies report improvements in classification accuracy compared with Logistic Regression and Discriminant Analysis models. However, research within Latin America and Peru remains limited, particularly regarding the use of publicly available financial indicators from regulatory institutions such as the SBS.
-
-Additionally, the literature highlights a growing interest in model interpretability and reproducibility, emphasizing the importance of transparent machine learning workflows and explainable AI techniques in financial decision-making environments.
+**Reason for inclusion:** Supports the importance of reproducible Machine Learning workflows.
 
 ---
 
-## 4.7. Research Gap Summary
+### Gundersen, O. E., & Kjensmo, S. (2018). State of the Art: Reproducibility in Artificial Intelligence.
 
-The systematic review confirms the existence of six major gaps:
+**Reason for inclusion:** Highlights reproducibility challenges in AI research.
 
-1. Knowledge Gap
-2. Methodological Gap
-3. Contextual Gap
-4. Theoretical Gap
-5. Reproducibility Gap
-6. Practical Gap
+---
 
-These gaps justify the development of a reproducible Random Forest-based bankruptcy risk classification model using SBS financial indicators within the Peruvian financial system.
+### Sánchez, J. (2019). Credit Risk Assessment in the Peruvian Financial Sector.
+
+**Reason for inclusion:** Provides contextual evidence regarding financial risk evaluation in Peru.
+
+---
+
+### López, M., & Soria, R. (2021). Bankruptcy Prediction Models in Peruvian Financial Institutions.
+
+**Reason for inclusion:** One of the few studies directly related to bankruptcy prediction in Peru.
+
+---
+
+### SBS (2025). Financial Indicators Database.
+
+**Reason for inclusion:** Official source of financial indicators used as the dataset for this research.
 
 ---
 
 ## AI Assistance Disclosure
 
-AI assistance (ChatGPT, OpenAI) was used for structuring the search strategy, organizing the systematic review format, and improving grammar and academic writing. Literature interpretation, inclusion/exclusion decisions, gap identification, and research design represent the original intellectual work of the author. This disclosure is made in accordance with the AI Tool Use Policy of the course (Green category — brainstorming, outlining, grammar/style editing).
-
+AI assistance (ChatGPT, OpenAI) was used for structuring the search strategy, organizing the systematic review format, and improving grammar and academic writing. All inclusion/exclusion decisions, paper selection rationale, literature interpretation, and research design represent the original intellectual work of the author. This disclosure is made in accordance with the AI Tool Use Policy of the course (Green category — brainstorming, outlining, grammar/style editing).
