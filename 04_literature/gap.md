@@ -50,6 +50,6 @@ This research seeks to address these limitations by developing and validating a 
 
 ---
 
-# AI Assistance Disclosure
+**AI Use Disclosure**
 
-AI assistance (ChatGPT, OpenAI) was used for organizing the table structure, improving academic writing, and refining the presentation of the identified research gaps. Gap identification, literature interpretation, reference selection, and research contributions represent the original intellectual work of the author. This disclosure is made in accordance with the AI Tool Use Policy of the course (Green category — brainstorming, outlining, grammar/style editing).
+AI (ChatGPT, OpenAI) was used to improve writing clarity, document organization, and formatting. The literature review, research gap identification, methodological decisions, and research contributions are the original work of the author.
