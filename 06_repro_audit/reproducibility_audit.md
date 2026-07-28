@@ -1,208 +1,86 @@
-# Reproducibility Audit
+# Reproducibility Audit Report
 
-## Paper Information
+## 6.1 Paper Audited
 
-| Item | Description |
-|------|-------------|
-| Title | Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring: An Update of Research |
-| Authors | Lessmann, Baesens, Seow & Thomas |
-| Journal | European Journal of Operational Research |
-| Year | 2015 |
-| Research Area | Machine Learning for Credit Risk Classification |
+**Lessmann, S., Baesens, B., Seow, H. V., & Thomas, L. C. (2015).**  
+*Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring: An Update of Research.*  
+European Journal of Operational Research, 247(1), 124–136.
 
 ---
 
-# Objective
+## Why This Paper?
 
-The purpose of this audit is to evaluate the reproducibility of a published Machine Learning paper by assessing whether sufficient methodological details are provided for an independent researcher to reproduce the reported experiments.
-
-The audit follows common reproducibility criteria used in computational research.
+This paper was selected because it is one of the principal methodological references for this research. It presents a comprehensive benchmark of Machine Learning algorithms for credit scoring and introduces rigorous statistical comparisons between classifiers. Since the proposed research also focuses on bankruptcy-related credit risk prediction using supervised Machine Learning, evaluating the reproducibility of this study helps assess the reliability of one of the methodological foundations of this repository.
 
 ---
 
-# Reproducibility Checklist
+# 6.2 Reproducibility Scorecard
 
-| Criterion | Evidence | Score |
-|-----------|----------|:----:|
-| Research question clearly stated | Yes | ✅ |
-| Dataset described | Yes | ✅ |
-| Dataset publicly available | Partially | 🟡 |
-| Data preprocessing explained | Partially | 🟡 |
-| Feature engineering described | Partially | 🟡 |
-| Train/Test split reported | Yes | ✅ |
-| Validation strategy described | Yes | ✅ |
-| Random seed reported | No | ❌ |
-| Hyperparameters reported | Partially | 🟡 |
-| Statistical significance tests reported | Yes | ✅ |
-| Confidence intervals reported | No | ❌ |
-| Evaluation metrics clearly defined | Yes | ✅ |
-| Software versions reported | No | ❌ |
-| Hardware/compute reported | No | ❌ |
-| Source code available | No | ❌ |
+The paper was evaluated using seven key reproducibility criteria commonly adopted in Machine Learning research.
+
+| # | Item | Score | Evidence |
+|---|------|:----:|----------|
+| 1 | Random seeds reported? | ❌ No | The paper explains the experimental methodology but does not explicitly report the random seeds used during model training or data partitioning. |
+| 2 | Data splits described? | 🟡 Partial | The benchmarking and validation strategy are described; however, the exact train/test partitions for every dataset are not fully documented. |
+| 3 | Multiple runs (variance reported)? | 🟡 Partial | Performance comparisons are presented, but variability across repeated executions (e.g., mean ± standard deviation) is not consistently reported. |
+| 4 | Statistical significance tests used? | ✅ Yes | One of the major contributions of the paper is the application of non-parametric statistical tests for comparing multiple classifiers. |
+| 5 | Confidence intervals reported? | ❌ No | Results are presented mainly as point estimates without confidence intervals. |
+| 6 | Compute environment documented? | ❌ No | Hardware specifications, execution time, and software environment are not fully described. |
+| 7 | Code & data publicly available? | ❌ No | The publication does not provide a public implementation or GitHub repository that allows direct replication. |
 
 ---
 
-# Detailed Assessment
+# 6.3 Overall Reproducibility Score
 
-## Dataset
+**Overall Score:** **3 / 7 (Moderate Reproducibility)**
 
-The paper provides a detailed description of the benchmark datasets used for credit scoring. However, not all datasets are fully accessible, limiting complete reproducibility.
-
-**Assessment:** Partial reproducibility.
+The study provides a rigorous experimental methodology and a well-designed benchmarking framework. However, several key elements required for complete computational reproducibility are missing, including random seeds, detailed computational environment, confidence intervals, and publicly available source code. Therefore, while the research is scientifically rigorous, reproducing the reported results exactly would be difficult for an independent researcher.
 
 ---
 
-## Experimental Design
+# 6.4 Relevance to My Research
 
-The experimental protocol is well described.
+This audit directly influenced the design of the present repository. Several reproducibility limitations identified in the audited paper have been addressed in this project.
 
-The authors explain:
-
-- model comparison
-- evaluation procedure
-- validation strategy
-- performance metrics
-
-These elements facilitate partial replication.
-
----
-
-## Randomness Control
-
-The publication does not explicitly report:
-
-- random seed
-- initialization strategy
-
-Without fixed seeds, exact replication becomes difficult.
-
-**Assessment:** Not reproducible.
-
----
-
-## Data Splitting
-
-The train/test strategy and validation methodology are described.
-
-This is one of the strongest aspects of the paper.
-
-**Assessment:** Reproducible.
-
----
-
-## Statistical Analysis
-
-The paper reports statistical significance testing when comparing algorithms.
-
-This strengthens the credibility of the reported results.
-
-**Assessment:** Reproducible.
-
----
-
-## Confidence Intervals
-
-Confidence intervals are not reported.
-
-Only point estimates are presented.
-
-This limits uncertainty estimation.
-
-**Assessment:** Not reproducible.
-
----
-
-## Computational Environment
-
-The paper does not provide sufficient information regarding:
-
-- software versions
-- operating system
-- hardware
-- execution environment
-
-These omissions reduce computational reproducibility.
-
----
-
-## Source Code
-
-The implementation used by the authors is not publicly available.
-
-Consequently, independent researchers must implement the methodology from scratch.
-
----
-
-# Overall Reproducibility Score
-
-| Criterion | Score |
-|-----------|-------|
-| Documentation | 9/10 |
-| Experimental Design | 9/10 |
-| Randomness Control | 3/10 |
-| Statistical Reporting | 8/10 |
-| Computational Environment | 2/10 |
-| Code Availability | 0/10 |
-
-## Final Score
-
-**Overall Reproducibility Score: 6.2 / 10**
-
----
-
-# Justification
-
-The paper presents a strong methodological description and clearly explains the experimental design, evaluation protocol, and statistical comparisons.
-
-However, several essential elements required for full computational reproducibility are missing, including:
-
-- random seed specification
-- software versions
-- computational environment
-- source code
-- confidence intervals
-
-As a result, the study is considered **moderately reproducible** rather than fully reproducible.
-
----
-
-# Lessons Learned for This Repository
-
-This audit influenced the design of the present repository.
-
-To improve reproducibility, this project includes:
+To improve reproducibility, this repository includes:
 
 - Fixed random seed (`random_state = 42`)
-- Public documentation
-- Version-controlled source code (Git)
-- Complete preprocessing documentation
-- Evaluation metrics
-- Requirements file
-- Reproducibility audit
-- Data management plan
-- Model card
-- Bias audit
+- Documented preprocessing pipeline
+- Explicit train/test split strategy
+- Version-controlled source code (Git/GitHub)
+- Data Management Plan
+- Model Card
+- Bias Audit
+- Ethics Protocol
+- Reproducibility documentation
 
-These practices aim to facilitate independent replication of the proposed Machine Learning framework.
-
----
-
-# Conclusion
-
-This audit demonstrates that methodological transparency alone is insufficient for full reproducibility.
-
-Complete computational reproducibility requires explicit reporting of datasets, preprocessing, software dependencies, random seeds, hardware specifications, statistical procedures, and source code.
-
-The lessons learned from this audit have been incorporated into the design of the present research repository.
+These practices aim to make the proposed Machine Learning framework more transparent and easier to reproduce than the audited study.
 
 ---
 
-**References**
+# 6.5 What Would Need to Change for This Paper to Pass a Stranger Test
 
-Lessmann, S., Baesens, B., Seow, H., & Thomas, L. (2015). *Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research*. European Journal of Operational Research, 247(1), 124–136.
+The reproducibility of the audited paper could be improved by:
+
+1. Reporting the random seeds used during training.
+2. Publishing the exact train/test partitions.
+3. Reporting confidence intervals or repeated-run variability.
+4. Documenting hardware and software versions.
+5. Releasing the implementation through a public GitHub repository.
+6. Providing reproducible preprocessing scripts and complete experimental settings.
+
+Implementing these practices would substantially improve computational reproducibility and facilitate independent verification of the reported results.
 
 ---
 
-**AI Use Disclosure**
+## Reflection
 
-AI (ChatGPT, OpenAI) was used to improve writing clarity and document organization. The reproducibility assessment, scoring, and critical analysis were performed by the author.
+This audit demonstrates that methodological quality does not automatically guarantee computational reproducibility. A study may provide valuable scientific contributions while still lacking sufficient implementation details for exact replication.
+
+For this reason, the present research adopts reproducible research practices from the beginning of the project by documenting the computational environment, preprocessing workflow, model configuration, and evaluation methodology.
+
+---
+
+## AI Assistance Disclosure
+
+AI (ChatGPT, OpenAI) was used to improve writing clarity, grammar, and Markdown formatting. The selection of the audited paper, the reproducibility assessment, and the critical analysis were independently conducted by the author after reviewing the published article.
