@@ -1,54 +1,84 @@
 # Paradigm Justification Statement
-
 ## Research Paradigms for AI: Positivism, Interpretivism & Computational Thinking
 
-### 1.1 Research Topic & Context
+---
 
-Credit risk assessment is one of the most critical activities within the financial system because it directly influences lending decisions, portfolio quality, and institutional stability. Traditional credit scoring approaches rely heavily on financial ratios and statistical techniques; however, modern financial environments generate increasingly complex and non-linear relationships among variables. The availability of financial indicators published by the Superintendence of Banking, Insurance and AFP (SBS) provides an opportunity to explore machine learning techniques capable of improving credit risk classification and supporting more informed decision-making processes.
+# 1.1 Research Topic & Context
 
-### 1.2 Preliminary Research Question
+The Peruvian financial system plays a fundamental role in maintaining economic stability by facilitating credit allocation, promoting investment, and safeguarding public confidence. To ensure the soundness of financial institutions, the Superintendence of Banking, Insurance and Private Pension Funds (SBS) continuously monitors financial indicators related to solvency, liquidity, profitability, operational efficiency, and portfolio quality.
 
-To what extent can a Random Forest machine learning model, trained on financial indicators obtained from the SBS, accurately classify credit risk levels in the Peruvian financial system?
+Credit risk assessment is one of the most critical supervisory activities because inaccurate risk classification may lead to poor lending decisions, deterioration of financial portfolios, and increased systemic risk. Traditionally, this evaluation has relied on financial ratios and statistical approaches. However, the increasing volume and complexity of financial information create opportunities for Artificial Intelligence and Machine Learning techniques capable of identifying nonlinear relationships that conventional methods may fail to detect.
 
-Three formulations of the same research question:
+The availability of standardized financial indicators published by the SBS provides an opportunity to develop a reproducible machine learning model capable of supporting credit risk classification while contributing to more transparent, evidence-based, and data-driven financial supervision in Peru.
 
-**Version A — Predictive Focus**
+---
 
-Which financial indicators contribute most to predicting credit risk levels in Peruvian financial institutions, and how accurately can Random Forest classify risk categories?
+# 1.2 Preliminary Research Question
 
-**Version B — Applied Focus**
+To what extent can a supervised machine learning model, trained on financial indicators published by the Superintendence of Banking, Insurance and AFP (SBS), accurately classify credit risk levels of Peruvian financial institutions while maintaining reproducibility, interpretability, and scientific validity?
 
-Can a reproducible machine learning pipeline based on Random Forest improve credit risk assessment and support decision-making processes in the Peruvian financial sector?
+### Three formulations of the same research question
 
-**Version C — Comparative Focus**
+### Version A — Predictive Focus
 
-Does Random Forest outperform traditional classification methods such as Logistic Regression and Decision Trees in the classification of credit risk using SBS financial indicators?
+Which financial indicators contribute most to predicting credit risk levels in Peruvian financial institutions, and how accurately can supervised machine learning models classify different risk categories?
 
-### 1.3 Chosen Paradigm & Justification
+### Version B — Applied Focus
 
-This research adopts a Computational and Quantitative Empirical paradigm grounded in the positivist tradition.
+Can a reproducible machine learning pipeline support financial supervision by improving credit risk assessment using publicly available SBS financial indicators?
 
-The study assumes that credit risk is an objective and measurable phenomenon that can be represented through financial indicators such as liquidity, solvency, profitability, operational efficiency, and portfolio quality ratios. These indicators can be analyzed quantitatively and modeled through machine learning algorithms to identify patterns associated with different risk levels.
+### Version C — Comparative Focus
 
-A purely interpretivist approach is not selected because the primary objective is not to understand subjective perceptions or experiences of financial analysts, but rather to develop a predictive model based on measurable evidence. The research problem requires quantitative analysis, statistical validation, and performance evaluation through metrics such as Accuracy, Precision, Recall, F1-score, and Confusion Matrix.
+Which supervised machine learning algorithm provides the best balance between predictive performance, interpretability, and reproducibility for credit risk classification using SBS financial indicators?
 
-The computational paradigm is appropriate because the problem involves discovering hidden relationships within multidimensional financial data, a context where machine learning algorithms have demonstrated superior performance compared to many traditional analytical techniques.
+---
 
-### 1.4 Implications of Paradigm Choice
+# 1.3 Chosen Paradigm & Justification
 
-**Data Type**
+This research adopts a **Computational and Quantitative Empirical paradigm grounded in the positivist tradition**, with Machine Learning serving as the methodological framework for knowledge generation.
 
-The study will use structured quantitative financial data obtained from SBS reports covering indicators related to solvency, liquidity, profitability, efficiency, and credit portfolio quality.
+From a positivist perspective, credit risk is considered an objective and measurable phenomenon that can be represented through observable financial indicators. Variables such as capital adequacy, liquidity, profitability, portfolio quality, operational efficiency, and financial leverage are assumed to capture aspects of institutional financial health that can be empirically measured, analyzed, and validated.
 
-**Methods**
+The objective of this research is not to understand the subjective perceptions of financial analysts or institutional decision-makers, but rather to identify reproducible patterns contained within structured financial data. Consequently, an interpretivist paradigm is not appropriate because the study does not seek to explain human experiences, organizational culture, or qualitative decision-making processes.
 
-The paradigm supports supervised machine learning methods, specifically Random Forest classification, supported by benchmarking against alternative algorithms and evaluated through standard classification metrics.
+The computational paradigm is particularly suitable because the research problem involves discovering complex and multidimensional relationships among financial variables using Artificial Intelligence techniques. Rather than manually defining decision rules, supervised machine learning algorithms learn these relationships directly from empirical evidence and generate predictive models that can be objectively evaluated through reproducible experiments.
 
-**Contribution**
+This paradigm also aligns with the principles of scientific rigor emphasized throughout this course: transparent methodology, reproducible experiments, documented computational environments, objective evaluation metrics, and open research practices.
 
-The expected contribution is a reproducible machine learning framework capable of improving credit risk classification in the Peruvian financial system while providing interpretable insights regarding the most influential financial indicators.
+---
 
-### 1.5 One Doubt or Tension
+# 1.4 Implications of Paradigm Choice
 
-The main uncertainty concerns the quality, completeness, and representativeness of publicly available financial data. Some financial indicators may contain missing values, inconsistencies, or class imbalance issues that could affect model performance and generalization. Addressing these challenges through preprocessing, validation, and benchmarking will be an important part of the research process.
+## Data
+
+The research will exclusively use structured quantitative financial information obtained from official SBS publications, including indicators related to solvency, liquidity, profitability, operational efficiency, credit portfolio quality, and other supervisory ratios.
+
+## Methods
+
+The paradigm supports supervised machine learning methods for classification. Different algorithms will be experimentally evaluated under the same reproducible framework before selecting the final predictive model according to objective performance criteria.
+
+## Validation
+
+Knowledge claims will be supported through empirical validation using reproducible experiments, train-validation-test partitions, fixed random seeds, cross-validation where appropriate, and standard evaluation metrics such as Accuracy, Precision, Recall, F1-score, ROC-AUC, and Confusion Matrix.
+
+## Expected Outputs
+
+The study is expected to produce:
+
+- A validated credit risk classification model.
+- A reproducible machine learning pipeline.
+- Identification of the financial indicators with the greatest predictive importance.
+- A transparent computational workflow suitable for replication by other researchers.
+
+## Scientific Contribution
+
+The research seeks to contribute to the emerging intersection between Artificial Intelligence and financial supervision by proposing a reproducible computational framework for credit risk classification using publicly available SBS financial information. Beyond predictive performance, the study contributes to methodological transparency, reproducibility, and explainability in AI-based financial decision support.
+
+---
+
+# 1.5 One Doubt or Tension
+
+The principal uncertainty concerns the quality and representativeness of publicly available supervisory data. Financial indicators may present missing values, reporting inconsistencies, temporal changes in regulatory criteria, or class imbalance that could affect model performance and external validity.
+
+An additional challenge involves balancing predictive accuracy with model interpretability. While more complex machine learning algorithms may achieve higher classification performance, financial supervision also requires transparent and explainable models that justify their predictions. Addressing this trade-off between predictive capability and interpretability will constitute an important methodological consideration throughout the research.
 
