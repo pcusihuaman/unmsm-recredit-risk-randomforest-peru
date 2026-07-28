@@ -1,55 +1,69 @@
 # Gap Analysis
 
-The systematic literature review identified several research gaps regarding the application of Artificial Intelligence to bankruptcy-related credit risk prediction in the Peruvian financial system.
+## Overview
 
-## Gap Analysis Table
+The systematic literature review identified several scientific and methodological gaps regarding the application of supervised Machine Learning for bankruptcy-related credit risk prediction. Although Machine Learning has demonstrated superior predictive performance compared with many traditional statistical approaches, important limitations remain in terms of reproducibility, explainability, and applications using official financial indicators from emerging economies such as Peru.
 
-| Gap Type | Gap Identified | Evidence (Citation) |
-|-----------|----------------|---------------------|
-| **Knowledge Gap** | Limited empirical evidence exists on supervised Machine Learning models developed using official financial indicators published by the Superintendencia de Banca, Seguros y AFP (SBS) for bankruptcy-related credit risk prediction in Peru. Existing local studies continue relying primarily on traditional financial ratio analysis and statistical approaches. | Altman (1968); Beaver (1966); López & Soria (2021) |
-| **Methodological Gap** | Most bankruptcy prediction studies evaluate individual predictive models independently rather than benchmarking multiple supervised Machine Learning algorithms under identical experimental conditions. Furthermore, reproducible computational workflows are rarely documented. | Lessmann et al. (2015); Khandani et al. (2010); Pineau et al. (2021) |
-| **Contextual Gap** | Few published studies focus specifically on the Peruvian banking and microfinance sector using official SBS financial indicators. Most available evidence originates from international datasets collected in developed economies, limiting their applicability to Peru. | SBS (2025); Sánchez (2019); Kim et al. (2018) |
-| **Explainability Gap** | The contribution of financial indicators associated with bankruptcy-related credit risk has not been sufficiently analyzed through Explainable Artificial Intelligence (XAI), limiting the interpretability and transparency of predictive models for financial decision-making. | Breiman (2001); Lundberg & Lee (2017); Kim et al. (2018) |
-| **Reproducibility Gap** | Many Machine Learning studies in bankruptcy prediction do not provide publicly available datasets, source code, or complete experimental workflows, making independent replication difficult. | Gundersen & Kjensmo (2018); Pineau et al. (2021) |
+---
+
+# Gap Analysis Table
+
+| Gap Type | Gap Identified | Supporting Literature |
+|-----------|----------------|-----------------------|
+| **Knowledge Gap** | Limited empirical evidence exists on supervised Machine Learning models developed using official financial indicators published by the Superintendencia de Banca, Seguros y AFP (SBS) for bankruptcy-related credit risk prediction in Peru. Most published studies rely on international datasets, limiting the generalizability of their findings to the Peruvian financial system. | Lessmann et al. (2015); Kim et al. (2018); SBS (2025) |
+| **Methodological Gap** | Few studies compare multiple supervised Machine Learning algorithms under identical experimental conditions while documenting a fully reproducible computational workflow. Most studies evaluate individual algorithms without emphasizing reproducibility and replication. | Khandani et al. (2010); Lessmann et al. (2015); Pineau et al. (2021) |
+| **Contextual Gap** | Very limited published evidence applies Machine Learning techniques to bankruptcy-related credit risk prediction using official SBS financial indicators within the Peruvian banking and microfinance sector. | Sánchez (2019); López & Soria (2021); SBS (2025) |
+| **Explainability Gap** | Most studies prioritize predictive performance while providing limited interpretation of the financial variables influencing model decisions through Explainable Artificial Intelligence (XAI) techniques. | Breiman (2001); Lundberg & Lee (2017); Kim et al. (2018) |
+| **Reproducibility Gap** | Numerous Machine Learning studies do not publicly provide datasets, source code, or complete experimental workflows, making independent validation and replication difficult. | Hutson (2018); Gundersen & Kjensmo (2018); Pineau et al. (2021) |
 
 ---
 
 # Research Contribution
 
-The proposed research addresses the identified gaps through the development of a reproducible supervised Machine Learning framework for bankruptcy-related credit risk classification using official financial indicators obtained from the Superintendencia de Banca, Seguros y AFP (SBS) of Peru.
+This research addresses the identified gaps by developing a reproducible supervised Machine Learning framework for bankruptcy-related credit risk classification using official financial indicators published by the Superintendencia de Banca, Seguros y AFP (SBS) of Peru.
+
+---
 
 ## Scientific Contribution
 
-- Expands empirical evidence regarding Machine Learning applications for bankruptcy-related credit risk prediction within the Peruvian financial system.
-- Evaluates the predictive capability of supervised Machine Learning models using official SBS financial indicators.
-- Identifies the financial variables most strongly associated with bankruptcy-related credit risk.
+- Expands empirical evidence on supervised Machine Learning for bankruptcy-related credit risk prediction within the Peruvian financial system.
+- Evaluates the predictive performance of supervised Machine Learning models using official SBS financial indicators.
+- Identifies the financial variables with the greatest influence on bankruptcy-related credit risk prediction.
 
 ---
 
 ## Methodological Contribution
 
 - Benchmarks multiple supervised Machine Learning algorithms under identical experimental conditions.
-- Implements a fully reproducible computational workflow using Python, Google Colab, Scikit-Learn, and GitHub.
-- Documents preprocessing, model training, validation procedures, and experimental settings to facilitate independent replication.
+- Implements a fully reproducible computational workflow using Python, Scikit-Learn, Google Colab, and GitHub.
+- Documents data preprocessing, model development, validation procedures, and experimental settings to facilitate independent replication.
 
 ---
 
 ## Practical Contribution
 
-- Provides an interpretable Artificial Intelligence model to support financial risk assessment.
-- Offers evidence that may assist financial institutions, regulators, and researchers in improving bankruptcy-related credit risk evaluation.
-- Establishes a reusable Machine Learning framework applicable to future financial risk prediction studies using SBS data.
+- Provides an interpretable Artificial Intelligence model to support bankruptcy-related credit risk assessment.
+- Generates evidence that may assist researchers, financial institutions, and regulatory agencies in improving financial risk evaluation.
+- Establishes a reusable Machine Learning framework applicable to future financial risk prediction studies using official SBS financial data.
 
 ---
 
-# Summary of the Research Gap
+# Research Gap Summary
 
-Current literature demonstrates that Machine Learning consistently improves bankruptcy prediction performance compared with traditional statistical approaches. However, important gaps remain regarding the use of official SBS financial indicators, reproducible computational research practices, Explainable Artificial Intelligence techniques, and empirical evidence focused on the Peruvian financial system.
+The reviewed literature demonstrates a progressive evolution from traditional statistical bankruptcy prediction models toward supervised Machine Learning approaches capable of capturing complex nonlinear relationships among financial indicators.
 
-This research seeks to address these limitations by developing and validating a transparent, reproducible, and interpretable Machine Learning framework specifically designed for bankruptcy-related credit risk classification in Peru.
+However, important limitations remain regarding reproducibility, explainability, and the application of Machine Learning using official financial indicators from emerging economies such as Peru. Furthermore, empirical studies focused specifically on the Peruvian financial system remain scarce.
+
+This research addresses these limitations by developing and validating a transparent, reproducible, and interpretable Machine Learning framework using official SBS financial indicators for bankruptcy-related credit risk classification.
+
+---
+
+# Future Research Opportunities
+
+Future research may extend this work by incorporating additional Machine Learning algorithms such as XGBoost, LightGBM, CatBoost, and deep learning architectures. Further studies may also integrate macroeconomic indicators, longitudinal financial information, Explainable Artificial Intelligence (XAI) techniques, and real-time financial risk monitoring systems for banking institutions.
 
 ---
 
 **AI Use Disclosure**
 
-AI (ChatGPT, OpenAI) was used to improve writing clarity, document organization, and formatting. The literature review, research gap identification, methodological decisions, and research contributions are the original work of the author.
+AI (ChatGPT, OpenAI) was used to improve writing clarity, document organization, and formatting. The research gap identification, literature interpretation, methodological decisions, and scientific contributions are the original work of the author.
