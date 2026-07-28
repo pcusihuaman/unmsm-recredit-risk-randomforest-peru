@@ -1,159 +1,208 @@
 # Reproducibility Audit
 
-## Objective
+## Paper Information
 
-This document evaluates the reproducibility of the proposed Machine Learning framework for bankruptcy-related credit risk classification using official financial indicators published by the Superintendencia de Banca, Seguros y AFP (SBS) of Peru.
+| Item | Description |
+|------|-------------|
+| Title | Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring: An Update of Research |
+| Authors | Lessmann, Baesens, Seow & Thomas |
+| Journal | European Journal of Operational Research |
+| Year | 2015 |
+| Research Area | Machine Learning for Credit Risk Classification |
 
-The objective is to ensure that an independent researcher can reproduce the complete experimental workflow using the information provided in this repository.
+---
+
+# Objective
+
+The purpose of this audit is to evaluate the reproducibility of a published Machine Learning paper by assessing whether sufficient methodological details are provided for an independent researcher to reproduce the reported experiments.
+
+The audit follows common reproducibility criteria used in computational research.
 
 ---
 
 # Reproducibility Checklist
 
-| Component | Status | Description |
-|-----------|:------:|-------------|
-| Research question | ✅ | Clearly defined. |
-| Dataset source | ✅ | Official financial indicators obtained from SBS. |
-| Data availability | ✅ | Publicly accessible. |
-| Data preprocessing | ✅ | Fully documented. |
-| Feature selection | ✅ | Explicitly described. |
-| Machine Learning models | ✅ | Documented with implementation details. |
-| Hyperparameters | ✅ | Reported. |
-| Train/Test split | ✅ | Documented. |
-| Evaluation metrics | ✅ | Accuracy, Precision, Recall, F1-score and ROC-AUC. |
-| Random seed | ✅ | Fixed to ensure reproducibility. |
-| Software environment | ✅ | Documented. |
-| Source code | ✅ | Available in this repository. |
-| Version control | ✅ | Managed using Git and GitHub. |
+| Criterion | Evidence | Score |
+|-----------|----------|:----:|
+| Research question clearly stated | Yes | ✅ |
+| Dataset described | Yes | ✅ |
+| Dataset publicly available | Partially | 🟡 |
+| Data preprocessing explained | Partially | 🟡 |
+| Feature engineering described | Partially | 🟡 |
+| Train/Test split reported | Yes | ✅ |
+| Validation strategy described | Yes | ✅ |
+| Random seed reported | No | ❌ |
+| Hyperparameters reported | Partially | 🟡 |
+| Statistical significance tests reported | Yes | ✅ |
+| Confidence intervals reported | No | ❌ |
+| Evaluation metrics clearly defined | Yes | ✅ |
+| Software versions reported | No | ❌ |
+| Hardware/compute reported | No | ❌ |
+| Source code available | No | ❌ |
 
 ---
 
-# Computational Environment
+# Detailed Assessment
 
-| Component | Specification |
-|-----------|---------------|
-| Programming Language | Python 3.12 |
-| Development Environment | Google Colab |
-| Operating System | Linux (Google Colab Runtime) |
-| Version Control | Git + GitHub |
+## Dataset
 
----
+The paper provides a detailed description of the benchmark datasets used for credit scoring. However, not all datasets are fully accessible, limiting complete reproducibility.
 
-# Python Libraries
-
-| Library | Purpose |
-|----------|---------|
-| pandas | Data manipulation |
-| numpy | Numerical computation |
-| scikit-learn | Machine Learning algorithms |
-| matplotlib | Visualization |
-| seaborn | Statistical visualization |
-| joblib | Model serialization |
+**Assessment:** Partial reproducibility.
 
 ---
 
-# Randomness Control
+## Experimental Design
 
-To ensure reproducibility, all experiments use a fixed random seed.
+The experimental protocol is well described.
 
-```python
-random_state = 42
-```
+The authors explain:
 
-This configuration guarantees identical data partitioning and deterministic model training whenever supported by the selected algorithm.
+- model comparison
+- evaluation procedure
+- validation strategy
+- performance metrics
 
----
-
-# Experimental Workflow
-
-```text
-Data Collection
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
-Feature Selection
-        │
-        ▼
-Train/Test Split
-        │
-        ▼
-Model Training
-        │
-        ▼
-Model Evaluation
-        │
-        ▼
-Result Analysis
-```
+These elements facilitate partial replication.
 
 ---
 
-# Data Versioning
+## Randomness Control
 
-The study uses official financial indicators published by the Superintendencia de Banca, Seguros y AFP (SBS).
+The publication does not explicitly report:
 
-No manual modification of the original dataset is performed. All preprocessing operations are executed programmatically and documented within the repository.
+- random seed
+- initialization strategy
 
----
+Without fixed seeds, exact replication becomes difficult.
 
-# Repository Structure
-
-```text
-project/
-
-├── data/
-├── notebooks/
-├── models/
-├── outputs/
-├── src/
-├── requirements.txt
-└── README.md
-```
+**Assessment:** Not reproducible.
 
 ---
 
-# Potential Threats to Reproducibility
+## Data Splitting
 
-| Risk | Mitigation |
-|------|------------|
-| Changes in the SBS database | Archive the downloaded dataset used in the experiments. |
-| Library version updates | Specify package versions in requirements.txt. |
-| Random initialization | Use a fixed random seed (42). |
-| Different hardware environments | Execute experiments using Google Colab. |
+The train/test strategy and validation methodology are described.
 
----
+This is one of the strongest aspects of the paper.
 
-# Reproducibility Assessment
-
-The proposed framework satisfies the fundamental principles of computational reproducibility by documenting:
-
-- Data source
-- Data preprocessing
-- Experimental workflow
-- Model configuration
-- Evaluation methodology
-- Computational environment
-- Software dependencies
-- Version control
-
-Consequently, an independent researcher should be able to reproduce the reported experiments using the documentation and source code contained in this repository.
+**Assessment:** Reproducible.
 
 ---
 
-# Future Improvements
+## Statistical Analysis
 
-Future versions of this repository may incorporate:
+The paper reports statistical significance testing when comparing algorithms.
 
-- Docker containers.
-- Continuous Integration (CI) workflows.
-- Automated experiment tracking.
-- Model versioning.
-- Dataset version control using DVC.
+This strengthens the credibility of the reported results.
+
+**Assessment:** Reproducible.
+
+---
+
+## Confidence Intervals
+
+Confidence intervals are not reported.
+
+Only point estimates are presented.
+
+This limits uncertainty estimation.
+
+**Assessment:** Not reproducible.
+
+---
+
+## Computational Environment
+
+The paper does not provide sufficient information regarding:
+
+- software versions
+- operating system
+- hardware
+- execution environment
+
+These omissions reduce computational reproducibility.
+
+---
+
+## Source Code
+
+The implementation used by the authors is not publicly available.
+
+Consequently, independent researchers must implement the methodology from scratch.
+
+---
+
+# Overall Reproducibility Score
+
+| Criterion | Score |
+|-----------|-------|
+| Documentation | 9/10 |
+| Experimental Design | 9/10 |
+| Randomness Control | 3/10 |
+| Statistical Reporting | 8/10 |
+| Computational Environment | 2/10 |
+| Code Availability | 0/10 |
+
+## Final Score
+
+**Overall Reproducibility Score: 6.2 / 10**
+
+---
+
+# Justification
+
+The paper presents a strong methodological description and clearly explains the experimental design, evaluation protocol, and statistical comparisons.
+
+However, several essential elements required for full computational reproducibility are missing, including:
+
+- random seed specification
+- software versions
+- computational environment
+- source code
+- confidence intervals
+
+As a result, the study is considered **moderately reproducible** rather than fully reproducible.
+
+---
+
+# Lessons Learned for This Repository
+
+This audit influenced the design of the present repository.
+
+To improve reproducibility, this project includes:
+
+- Fixed random seed (`random_state = 42`)
+- Public documentation
+- Version-controlled source code (Git)
+- Complete preprocessing documentation
+- Evaluation metrics
+- Requirements file
+- Reproducibility audit
+- Data management plan
+- Model card
+- Bias audit
+
+These practices aim to facilitate independent replication of the proposed Machine Learning framework.
+
+---
+
+# Conclusion
+
+This audit demonstrates that methodological transparency alone is insufficient for full reproducibility.
+
+Complete computational reproducibility requires explicit reporting of datasets, preprocessing, software dependencies, random seeds, hardware specifications, statistical procedures, and source code.
+
+The lessons learned from this audit have been incorporated into the design of the present research repository.
+
+---
+
+**References**
+
+Lessmann, S., Baesens, B., Seow, H., & Thomas, L. (2015). *Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research*. European Journal of Operational Research, 247(1), 124–136.
 
 ---
 
 **AI Use Disclosure**
 
-AI (ChatGPT, OpenAI) was used to improve writing clarity, document organization, and formatting. The reproducibility strategy, computational decisions, and experimental design were defined by the author.
+AI (ChatGPT, OpenAI) was used to improve writing clarity and document organization. The reproducibility assessment, scoring, and critical analysis were performed by the author.
