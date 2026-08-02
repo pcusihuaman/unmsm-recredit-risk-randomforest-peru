@@ -1,5 +1,6 @@
 # Paradigm Justification Statement
-## Research Paradigms for AI: Positivism, Interpretivism & Computational Thinking
+##  Title>Development of an Artificial Intelligence Model (Random Forest) to Estimate Bankruptcy-Related Credit Risk in the Peruvian Financial Sector Using SBS Financial Indicators.  
+Research Paradigms for AI: Positivism, Interpretivism & Computational Thinking
 
 ---
 
