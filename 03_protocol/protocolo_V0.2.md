@@ -120,6 +120,8 @@ Official financial indicators published by the **Superintendencia de Banca, Segu
 
 **Study Period:** 2014–2025.
 
+Link :  https://www.sbs.gob.pe/app/stats_net/stats/EstadisticaBoletinEstadistico.aspx?p=3#
+
 ---
 
 ## Population
