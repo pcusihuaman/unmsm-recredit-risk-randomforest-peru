@@ -14,9 +14,9 @@ The literature review followed a structured search strategy based on the PRISMA 
 
 | Field | Description |
 |---------|-------------|
-| Database | Semantic Scholar |
+| Database | Scopus , Web of Science , Scielo ,Google Scholar |
 | Date of Search | June 2026 |
-| Period Covered | **1966–2025** |
+| Period Covered | **2001–2025** |
 | Languages | English, Spanish |
 | Document Types | Journal Articles and Conference Papers |
 | Search Fields | Title, Abstract, Keywords |
@@ -108,8 +108,8 @@ Verification:
 
 | Study | Main Contribution |
 |--------|------------------|
-| Beaver (1966) | Demonstrated that financial ratios can predict corporate failure. |
-| Altman (1968) | Introduced the Z-score model for bankruptcy prediction. |
+| Beaver (2001) | Demonstrated that financial ratios can predict corporate failure. |
+| Altman (2002) | Introduced the Z-score model for bankruptcy prediction. |
 | Thomas et al. (2002) | Established theoretical foundations for modern credit scoring. |
 
 ---
