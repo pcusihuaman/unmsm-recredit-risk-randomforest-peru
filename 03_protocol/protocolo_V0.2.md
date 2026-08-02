@@ -282,7 +282,9 @@ All source code, datasets, methodological decisions, and experimental procedures
 
 The project relies primarily on publicly available financial data and open-source technologies. Development will be conducted using Google Colab, Python, Scikit-Learn, and GitHub, minimizing infrastructure costs while ensuring reproducibility.
 
-Bibliography
+
+##  Bibliography
+
 
 Baesens, B., Van Gestel, T., Viaene, S., Stepanova, M., Suykens, J., & Vanthienen, J. (2003). Benchmarking state-of-the-art classification algorithms for credit scoring. *Journal of the Operational Research Society, 54*(6), 627–635. https://doi.org/10.1057/palgrave.jors.2601545
 
